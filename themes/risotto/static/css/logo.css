@@ -25,13 +25,3 @@ a.page__logo-inner:hover,
 a.page__logo-inner:active {
     opacity: 1;
 }
-
-.page__logo-inner:before {
-    content: "[";
-    color: var(--bg);
-}
-
-.page__logo-inner:after {
-    content: "] $";
-    color: var(--bg);
-}

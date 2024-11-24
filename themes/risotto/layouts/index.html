@@ -1,4 +1,13 @@
 {{ define "main" }}
     {{ .Content }}
+    {{ range .Site.RegularPages }}
+        <header class="post__header">
+            <h1><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>{{ if .Date }} | {{ .Date.Format "2006-01-02" }}{{ end }}</h1>
+            <blockquote>{{ .Summary }}</blockquote>
+        </header>
+    {{ end }}
 {{ end }}
 
+{{define "aside" }}
+    {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+{{ end }}
