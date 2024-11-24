@@ -1,0 +1,97 @@
+baseURL = 'https://ianedgeley.com'
+languageCode = 'en'
+title = 'ian edgeley | blog etc'
+theme = 'risotto'
+copyright = "© [ian edgeley](https://ianedgeley.com)"
+paginate = 3
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
+# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
+ignoreErrors = ["error-remote-getjson"]
+
+# Automatically add content sections to main menu
+sectionPagesMenu = "main"
+
+[params]
+noindex = false
+
+[params.theme]
+palette = "gruvbox-light"
+
+#apprentice, base16-dark, base16-light, dracula, gruvbox-dark, gruvbox-light, material, papercolor-dark, papercolor-light, solarized-dark, solarized-light, tender, tokyo-night-dark, tokyo-night-light, windows-95 and windows-95-light. The default is base16-dark.
+
+# Sidebar: about/bio
+[params.about]
+title = "ian edgeley"
+description = "being dragged kicking and screaming out of web 1.0"
+# unicode/emoji logo:
+logo = "🪿"
+
+[[params.socialLinks]]
+icon = "fa-brands fa-github"
+title = "GitHub"
+url = "https://github.com/ijecode"
+
+[[params.socialLinks]]
+icon = "fa-solid fa-envelope"
+title = "Email"
+url = "mailto:ian@ianedgeley.com"
+
+[[params.socialLinks]]
+icon = "fa-brands fa-linkedin"
+title = "LinkedIn"
+url = "https://www.linkedin.com/in/iedgeley/"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "cv"
+    name = "cv"
+    url = "/cv/"
+    weight = 10
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+# For hugo >= 0.60.0, enable inline HTML
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup]
+
+  # Table of contents
+  # Add toc = true to content front matter to enable
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel   = 3
+    ordered    = true
+
+[privacy]
+
+  [privacy.vimeo]
+    disabled = false
+    simple = true
+
+  [privacy.twitter]
+    disabled = false
+    enableDNT = true
+    simple = true
+
+  [privacy.instagram]
+    disabled = false
+    simple = true
+
+  [privacy.youtube]
+    disabled = false
+    privacyEnhanced = true
+
+[services]
+
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.twitter]
+    disableInlineCSS = true
